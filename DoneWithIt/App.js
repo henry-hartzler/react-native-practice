@@ -10,10 +10,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Text numberOfLines={1} onPress={handlePress}>Hello React Native</Text>
       <Button title='Click Me' 
-      onPress={() => Alert.alert("My title", "My message", [
-        {text: "Yes", onPress: () => console.log("yes")},
-        {text: "No", onPress: () => console.log("no")}
-        ])}/>
+      onPress={() => Alert.prompt("My title", "My message", text => console.log(text))}/>
     </SafeAreaView>
   );
 }
