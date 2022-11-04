@@ -14,7 +14,7 @@ export default function App() {
     </SafeAreaView>
   );
 }
-
+//video paused at 1:09:59 StyleSheets
 const styles = StyleSheet.create({
   container: {
     flex: 1,
