@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, TouchableHighlight, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TouchableHighlight, Image, Alert, Button } from 'react-native';
 
 export default function App() {
   const handlePress = () => {
@@ -9,7 +9,11 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text numberOfLines={1} onPress={handlePress}>Hello React Native</Text>
-      <Button color="orange" title='Click Me' onPress={() => console.log("button tapped")}/>
+      <Button title='Click Me' 
+      onPress={() => Alert.alert("My title", "My message", [
+        {text: "Yes", onPress: () => console.log("yes")},
+        {text: "No", onPress: () => console.log("no")}
+        ])}/>
     </SafeAreaView>
   );
 }
