@@ -13,9 +13,8 @@ export default function App() {
     >
       <View style={{
         backgroundColor: "dodgerblue",
-        flexBasis: 100, //width or height
-        // width: 100,
-        flexGrow: 1, //fills the available space - same as flex
+        flexShrink: 1, //item can shrink if overflowing off the screen - same as setting flex to -1
+        width: 400,
         height: 100
       }}
       />
