@@ -13,15 +13,15 @@ export default function App() {
     >
       <View style={{
         backgroundColor: "dodgerblue",
-        flexShrink: 1, //item can shrink if overflowing off the screen - same as setting flex to -1
-        width: 400,
+        width: 100,
         height: 100
       }}
       />
       <View style={{
         backgroundColor: "gold",
         width: 100,
-        height: 100
+        height: 100,
+        top: 20 //by default, all react native components have relative positioning
       }}
       />
       <View style={{
