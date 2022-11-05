@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, TouchableHighlight, Image, Alert, Button } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TouchableHighlight, Image, Alert, Button, Platform } from 'react-native';
 
 export default function App() {
   const handlePress = () => {
@@ -8,6 +8,7 @@ export default function App() {
 
   return (
     //style on the right overwrites those to the left
+    //SafeAreaView may only work on iOS
     <SafeAreaView style={[styles.container, containerStyle]}>
       <Text numberOfLines={1} onPress={handlePress}>Hello React Native</Text>
       <Button title='Click Me' 
@@ -18,13 +19,16 @@ export default function App() {
 
 const containerStyle = { backgroundColor: "orange" };
 
+//ctrl + space gives acceptable options list
+
 //conventionally, styles are written below their component
 //video paused at 1:09:59 StyleSheets
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });
