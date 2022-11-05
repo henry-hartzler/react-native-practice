@@ -9,14 +9,14 @@ export default function App() {
       flexDirection: 'row', //horizontal
       justifyContent: 'center', //main axis
       alignItems: 'center', //secondary axis
-      alignContent: 'center', //alignContent is used with wrapping to designate where items are located
-      flexWrap: 'wrap'
     }}
     >
       <View style={{
         backgroundColor: "dodgerblue",
-        width: 100,
-        height: 300
+        flexBasis: 100, //width or height
+        // width: 100,
+        flexGrow: 1, //fills the available space - same as flex
+        height: 100
       }}
       />
       <View style={{
@@ -27,18 +27,6 @@ export default function App() {
       />
       <View style={{
         backgroundColor: "tomato",
-        width: 100,
-        height: 100
-      }}
-      />
-      <View style={{
-        backgroundColor: "grey",
-        width: 100,
-        height: 100
-      }}
-      />
-      <View style={{
-        backgroundColor: "greenyellow",
         width: 100,
         height: 100
       }}
