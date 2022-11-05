@@ -8,24 +8,37 @@ export default function App() {
       flex: 1,
       flexDirection: 'row', //horizontal
       justifyContent: 'center', //main axis
-      alignItems: 'center' //secondary axis
+      alignItems: 'center', //secondary axis
+      alignContent: 'center', //alignContent is used with wrapping to designate where items are located
+      flexWrap: 'wrap'
     }}
     >
       <View style={{
         backgroundColor: "dodgerblue",
         width: 100,
-        height: 300,
-        alignSelf: 'flex-start'
+        height: 300
       }}
       />
       <View style={{
         backgroundColor: "gold",
         width: 100,
-        height: 200
+        height: 100
       }}
       />
       <View style={{
         backgroundColor: "tomato",
+        width: 100,
+        height: 100
+      }}
+      />
+      <View style={{
+        backgroundColor: "grey",
+        width: 100,
+        height: 100
+      }}
+      />
+      <View style={{
+        backgroundColor: "greenyellow",
         width: 100,
         height: 100
       }}
