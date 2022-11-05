@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
 
+//ended on Exercises => check out videos if I need help with personal project
+
 export default function App() {
   return (
     <View style={{
@@ -21,7 +23,9 @@ export default function App() {
         backgroundColor: "gold",
         width: 100,
         height: 100,
-        top: 20 //by default, all react native components have relative positioning
+        top: 20, //by default, all react native components have relative positioning
+        left: 20,
+        position: "absolute" //absolute moves relative to parent and the layout around it changes
       }}
       />
       <View style={{
