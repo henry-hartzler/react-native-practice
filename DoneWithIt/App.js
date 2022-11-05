@@ -1,18 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, TouchableHighlight, Image, Alert, Button, Platform } from 'react-native';
+import { 
+  StyleSheet,  
+  SafeAreaView,
+  Platform,
+  View,
+  Dimensions
+} from 'react-native';
 
 export default function App() {
-  const handlePress = () => {
-    console.log("Text pressed")
-  }
+  //helpful to check the dimensions of that phone - but doesnt respond to orientation changes
+  console.log(Dimensions.get("screen"))
 
   return (
     //style on the right overwrites those to the left
     //SafeAreaView may only work on iOS
     <SafeAreaView style={[styles.container, containerStyle]}>
-      <Text numberOfLines={1} onPress={handlePress}>Hello React Native</Text>
-      <Button title='Click Me' 
-      onPress={() => Alert.prompt("My title", "My message", text => console.log(text))}/>
+     <View style={{
+      backgroundColor: 'dodgerblue',
+      //density-independent pixels
+      //physical pixels = DIPs x Scale Factor of device
+      width: '100%',
+      height: '30%'
+     }}
+     >
+
+     </View>
     </SafeAreaView>
   );
 }
