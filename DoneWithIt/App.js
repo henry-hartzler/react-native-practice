@@ -7,13 +7,18 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    //style on the right overwrites those to the left
+    <SafeAreaView style={[styles.container, containerStyle]}>
       <Text numberOfLines={1} onPress={handlePress}>Hello React Native</Text>
       <Button title='Click Me' 
       onPress={() => Alert.prompt("My title", "My message", text => console.log(text))}/>
     </SafeAreaView>
   );
 }
+
+const containerStyle = { backgroundColor: "orange" };
+
+//conventionally, styles are written below their component
 //video paused at 1:09:59 StyleSheets
 const styles = StyleSheet.create({
   container: {
